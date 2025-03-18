@@ -22,7 +22,7 @@ class Carousel {
                 Carousel._sequence = 0;
                 Carousel._size = arr.length;
                 Carousel.Next(); //start
-                Carousel._interval = setInterval(function(){ Carousel.Next(); },5000);
+                Carousel._interval = setInterval(function(){ Carousel.Next(); },2000);
             }
             
         } else {
