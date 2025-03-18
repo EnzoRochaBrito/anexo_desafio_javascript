@@ -118,3 +118,12 @@ button {
     border: 0px;
     border-radius: 10px;
 }
+
+#carousel{
+    text-align: center;
+}
+
+
+#carousel img{
+    max-height: 100%;
+}
