@@ -38,7 +38,7 @@ class Carousel {
         this.carouselUrl     = this.currentCarousel.Url;
 
         document.querySelector('#carousel').innerHTML = `<a href="${this.carouselUrl}"><img src="img/${this.carouselImage}" alt="${this.carouselTitle}"></a>`
-        document.querySelector('#carousel-title').innerHTML = `${this.carouselTitle}`
+        document.querySelector('#carousel-title').innerHTML = `<a href="${this.carouselUrl}">${this.carouselTitle}</a>`
 
 
         if (Carousel._sequence >= Carousel._size-1){

@@ -126,4 +126,5 @@ button {
 
 #carousel img{
     max-height: 100%;
+    border-radius: 0.5rem;
 }
