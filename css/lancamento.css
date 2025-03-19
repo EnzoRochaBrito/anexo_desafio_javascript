@@ -83,3 +83,10 @@ div#compare {
     -webkit-box-shadow: 1px 1px 6px 0px rgb(0 0 0 / 34%);
     box-shadow: 1px 1px 6px 0px rgb(0 0 0 / 34%);
 }
+
+.comparar_bloqueado {
+    background-color: gray !important;
+}
+.comparar_bloqueado:hover {
+    background-color: rgb(80, 80, 80);
+}
