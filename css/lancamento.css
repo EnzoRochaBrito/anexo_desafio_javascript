@@ -88,5 +88,5 @@ div#compare {
     background-color: gray !important;
 }
 .comparar_bloqueado:hover {
-    background-color: rgb(80, 80, 80);
+    background-color: rgb(80, 80, 80) !important;
 }

@@ -68,7 +68,6 @@ function SetCarToCompare(el, carClass) {
     }
     if (carArr.length == 2){
         botaoComparar.classList.remove('comparar_bloqueado');
-        botaoComparar.disabled = false;
         checkboxes.forEach(check => {
             if (!check.checked){
                 check.disabled = true;
@@ -76,7 +75,6 @@ function SetCarToCompare(el, carClass) {
         });
     } else {
         botaoComparar.classList.add('comparar_bloqueado');
-        botaoComparar.disabled = true;
         checkboxes.forEach(check => {
             if (check.disabled){
                 check.disabled = false;
