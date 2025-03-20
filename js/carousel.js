@@ -45,14 +45,16 @@ class Carousel {
         document.querySelector(`#carousel a:nth-child(${Carousel._sequence+1})`).style.display = 'inline';
         document.querySelector(`#carousel-title a:nth-child(${Carousel._sequence+1})`).style.display = 'inline';
 
+        (Carousel._sequence >= Carousel._size-1) ? Carousel._sequence = 0 : Carousel._sequence++;
+        
         // console.log(Carousel._sequence)
         
-        if (Carousel._sequence >= Carousel._size-1){
-            Carousel._sequence = 0;
-        } else {
-            Carousel._sequence++;
-        }
-        
+        // if (Carousel._sequence >= Carousel._size-1){
+        //     Carousel._sequence = 0;
+        // } else {
+        //     Carousel._sequence++;
+        // }
+
     }
     
     static InsertContent(arr){
