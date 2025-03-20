@@ -82,6 +82,8 @@ nav li {
 
 main {
     min-height: calc(100% - 167px);
+    display: flex;
+    flex-direction: column;
 }
 
 nav#social {
@@ -120,7 +122,9 @@ button {
 }
 
 #carousel{
+    display: inline-block;
     text-align: center;
+    position: relative;
 }
 
 #carousel a img{
