@@ -5,13 +5,10 @@ let carArr = [];
 // Exemplo: carro na posição 0 do array foi desselecionado
 // Então vai ser chamado o delete_car[0], que vai dar carArr.shift()
 
-const delete_car = [
-    function(){
-        carArr.shift();
-    },
-    function(){
-        carArr.pop();
-    }];
+const delete_car = {
+    0: function(){carArr.shift();},
+    1: function(){carArr.pop();}
+};
 
 const checkboxes = document.querySelectorAll('.checkbox');
 const botaoComparar = document.querySelector('.botao_comparar');
