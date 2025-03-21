@@ -35,7 +35,7 @@ function Enviar(pessoa) {
     var nome = pessoa.nome;
     
     if (nome != "") {
+        document.location = 'index.html';
         alert('Obrigado sr(a) ' + nome + ' os seus dados foram encaminhados com sucesso');
     }
-
 }
