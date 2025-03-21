@@ -47,7 +47,7 @@ header {
     border-bottom: 1px solid #ccc;
     margin-bottom: 10px;
     padding: 10px;
-    display: flex;
+    position: relative;
 }
 
 header div {
@@ -59,9 +59,12 @@ header nav {
     height: auto;
     align-content: center;
     display: inline-block;
+    position: absolute;
     vertical-align: middle;
-    margin-left: calc(50% - 150px);
-    transform: translate(-50%, 0);
+    width: max-content;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 header nav ul{
@@ -159,5 +162,15 @@ button {
     }
     #carousel-title{
         font-size: 4vw;
+    }
+
+    header div img {
+        width: 70px;
+    }
+    header nav{
+        scale: 0.7;
+        left: 45%;
+        top: 45%;
+        transform: translate(-50%, -50%);
     }
 }
