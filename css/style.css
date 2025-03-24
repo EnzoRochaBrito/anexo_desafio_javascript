@@ -4,6 +4,8 @@ body {
     background: #FFFFFF;
     height: 100%;
     font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
 }
 
 html {
@@ -68,7 +70,6 @@ header nav {
 }
 
 header nav ul{
-    display: inline;
     min-width: 325px;
 }
 
@@ -93,9 +94,10 @@ nav li {
 }
 
 main {
-    min-height: calc(100% - 167px);
+    height: auto;
     display: flex;
     flex-direction: column;
+    flex: 1;
 }
 
 nav#social {
@@ -163,7 +165,7 @@ button {
     #carousel-title{
         font-size: 4vw;
     }
-
+    
     header div img {
         width: 70px;
     }
@@ -173,4 +175,11 @@ button {
         top: 45%;
         transform: translate(-50%, -50%);
     }
+}
+
+@media screen and (max-width: 350px){
+    span.redesociais{
+        display: block;
+    }
+
 }
