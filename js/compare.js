@@ -1,15 +1,6 @@
 // array de carros
 let carArr = [];
 
-// array que deleta o carro a depender da sua posição no array "carArr"
-// Exemplo: carro na posição 0 do array foi desselecionado
-// Então vai ser chamado o delete_car[0], que vai dar carArr.shift()
-
-const delete_car = {
-    0: function(){carArr.shift();},
-    1: function(){carArr.pop();}
-};
-
 const checkboxes = document.querySelectorAll('.checkbox');
 const botaoComparar = document.querySelector('.botao_comparar');
 
@@ -53,11 +44,7 @@ function SetCarToCompare(el, carClass) {
         } else {
 
             id = GetCarArrPosition(carArr ,carClass);
-            if (id < 0){
-                // pass
-            } else {
-                delete_car[id]();
-            }
+            carArr.splice(id, 1);
         }
 
     } else {
