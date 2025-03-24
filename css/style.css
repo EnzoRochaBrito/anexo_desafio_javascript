@@ -4,6 +4,8 @@ body {
     background: #FFFFFF;
     height: 100%;
     font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
 }
 
 html {
@@ -47,6 +49,7 @@ header {
     border-bottom: 1px solid #ccc;
     margin-bottom: 10px;
     padding: 10px;
+    position: relative;
 }
 
 header div {
@@ -55,9 +58,19 @@ header div {
 }
 
 header nav {
+    height: auto;
+    align-content: center;
     display: inline-block;
+    position: absolute;
     vertical-align: middle;
-    width: 80vw;
+    width: max-content;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+header nav ul{
+    min-width: 325px;
 }
 
 header nav a {
@@ -81,9 +94,10 @@ nav li {
 }
 
 main {
-    min-height: calc(100% - 167px);
+    height: auto;
     display: flex;
     flex-direction: column;
+    flex: 1;
 }
 
 nav#social {
