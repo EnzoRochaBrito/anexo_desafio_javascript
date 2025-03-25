@@ -84,20 +84,20 @@ function HideCompare(){
 function UpdateCompareTable() {
     for (let i = 0 ; i < carArr.length; i++){
         
-        let _car  = carArr[i];
-        let preco = parseFloat(_car.preco).toLocaleString('pt-BR');
+        let car  = carArr[i];
+        let preco = parseFloat(car.preco).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'});
         
-        document.querySelector("#compare_image_" + i).innerHTML = `<img src="${_car.image}">`;
-        document.querySelector("#compare_modelo_" + i).innerHTML = _car.nome;
-        document.querySelector("#compare_alturacacamba_" + i).innerHTML = _car.alturaCacamba;
-        document.querySelector("#compare_alturaveiculo_" + i).innerHTML = _car.alturaVeiculo;
-        document.querySelector("#compare_alturasolo_" + i).innerHTML = _car.alturaSolo;
-        document.querySelector("#compare_capacidadecarga_" + i).innerHTML = _car.capacidadeCarga;
-        document.querySelector("#compare_motor_" + i).innerHTML = _car.motor;
-        document.querySelector("#compare_potencia_" + i).innerHTML = _car.potencia;
-        document.querySelector("#compare_volumecacamba_" + i).innerHTML = _car.volumeCacamba;
-        document.querySelector("#compare_roda_" + i).innerHTML = _car.roda;
-        document.querySelector("#compare_preco_" + i).innerHTML = "R$ " + preco;
+        document.querySelector("#compare_image_" + i).innerHTML = `<img src="${car.image}">`;
+        document.querySelector("#compare_modelo_" + i).innerHTML = car.nome;
+        document.querySelector("#compare_alturacacamba_" + i).innerHTML = car.alturaCacamba;
+        document.querySelector("#compare_alturaveiculo_" + i).innerHTML = car.alturaVeiculo;
+        document.querySelector("#compare_alturasolo_" + i).innerHTML = car.alturaSolo;
+        document.querySelector("#compare_capacidadecarga_" + i).innerHTML = car.capacidadeCarga;
+        document.querySelector("#compare_motor_" + i).innerHTML = car.motor;
+        document.querySelector("#compare_potencia_" + i).innerHTML = car.potencia;
+        document.querySelector("#compare_volumecacamba_" + i).innerHTML = car.volumeCacamba;
+        document.querySelector("#compare_roda_" + i).innerHTML = car.roda;
+        document.querySelector("#compare_preco_" + i).innerHTML = preco;
     } 
     // nome, preco, alturaCacamba, alturaVeiculo, alturaSolo, capacidadeCarga, motor, potencia, volumeCacamba, roda, image
 }

@@ -13,7 +13,6 @@ class contato {
 }
 
 function Post(form) {
-
     let data = new contato(form.elements.namedItem("nome").value,
                 form.elements.namedItem("sobrenome").value, 
                 form.elements.namedItem("email").value, 
