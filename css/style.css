@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
+button{
+    cursor: pointer;
+}
+
 body {
     background: #FFFFFF;
     height: 100%;

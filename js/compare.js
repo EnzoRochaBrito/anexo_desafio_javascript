@@ -1,9 +1,13 @@
 // array de carros
-let carArr = [];
+let carArr   = [];
+let carOrder = {};
 
-const checkboxes = document.querySelectorAll('.checkbox');
+const checkboxes    = document.querySelectorAll('.checkbox');
 const botaoComparar = document.querySelector('.botao_comparar');
 
+checkboxes.forEach((box, id) => {
+    box.value = id;
+})
 
 class Car {
    
@@ -40,11 +44,15 @@ function SetCarToCompare(el, carClass) {
         if(el.checked && carArr.length < 2){
 
             carArr.push(carClass);
+            carOrder[carClass.nome] = el.value
 
         } else {
-
+            carArr = carArr.filter(carro => carro.nome !== carClass.nome
+            )
+            // remove o carro da lista
             id = GetCarArrPosition(carArr ,carClass);
             carArr.splice(id, 1);
+            delete carOrder[carClass.nome]
         }
 
     } else {
@@ -82,6 +90,15 @@ function HideCompare(){
 }
 
 function UpdateCompareTable() {
+
+    // Organiza a lista para deixar os carros em ordem
+    if (carOrder[carArr[0].nome] > carOrder[carArr[1].nome]){
+        let temp = carArr[0];
+        carArr.splice(0,1);
+        carArr.push(temp);
+    }
+
+
     for (let i = 0 ; i < carArr.length; i++){
         
         let car  = carArr[i];
