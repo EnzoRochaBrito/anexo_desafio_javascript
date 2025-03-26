@@ -47,8 +47,6 @@ function SetCarToCompare(el, carClass) {
             carOrder[carClass.nome] = el.value
 
         } else {
-            carArr = carArr.filter(carro => carro.nome !== carClass.nome
-            )
             // remove o carro da lista
             id = GetCarArrPosition(carArr ,carClass);
             carArr.splice(id, 1);
