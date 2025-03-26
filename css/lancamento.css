@@ -108,7 +108,7 @@ td img{
         }
     }
     td img {
-        width: 70%;
+        width: 60%;
     }
     
     td {
@@ -119,5 +119,11 @@ td img{
     table{
         height: calc(100% - 80px);
         max-height: 100px;
+    }
+}
+
+@media screen and (max-height: 500px){
+    th, td{
+        padding: 4px;
     }
 }
