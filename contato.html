@@ -8,6 +8,7 @@
     <link href="css/reset.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/form.css" rel="stylesheet">
+    <link rel="shortcut icon" href="img/ford-ico.png" type="image/x-icon">
     <script src="js/form.js"></script>
 </head>
 <body>
@@ -40,14 +41,14 @@
             <form method="post" onsubmit="Post(this); return false;">
                 <input type="text" name="nome" placeholder="NOME*" class="fordform" required>
                 <input type="email" name="email" placeholder="E-MAIL*" class="fordform" required>
-                <input type="text" name="cpf" placeholder="CPF*" class="fordform" required>
-                <input type="text" name="sobrenome" placeholder="SOBRENOME*" class="fordform" required>
                 <input type="tel" name="telefone" placeholder="TELEFONE*" class="fordform" required>
                 <select name="contato" class="fordform" required>
-                    <option value="1" selected disabled>COMO DESEJA SER CONTATADO</option>
-                    <option value="2">TELEFONE</option>
-                    <option value="3">E-MAIL</option>
+                    <option value="" selected disabled>SELECIONE O TIPO DE CONTATO</option>
+                    <option value="elogio">ELOGIO</option>
+                    <option value="reclamacao">RECLAMAÇÃO</option>
+                    <option value="solicitacao">SOLICITAÇÃO</option>
                 </select>
+                <textarea class="fordform" name="mensagem" id="mensagem" placeholder="MENSAGEM*" required></textarea>
             <button type="submit">Enviar</button>
             </form>
             </div>

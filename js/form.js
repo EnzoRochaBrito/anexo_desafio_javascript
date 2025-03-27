@@ -2,36 +2,41 @@
 //class contato
 
 class contato {
-    constructor(nome, sobrenome, email, cpf, telefone, contato){
+    constructor(nome, email, telefone, contato, mensagem){
         this.nome      = nome;
-        this.sobrenome = sobrenome;
         this.email     = email;
-        this.cpf       = cpf;
         this.telefone  = telefone;
         this.contato   = contato;
+        this.mensagem  = mensagem;
+    }
+
+    dados(){
+        return {
+            "nome" : this.nome,
+            "email" : this.email,
+            "telefone" : this.telefone,
+            "contato" : this.contato,
+            "mensagem" : this.mensagem,
+        }
     }
 }
 
 function Post(form) {
     let data = new contato(form.elements.namedItem("nome").value,
-                form.elements.namedItem("sobrenome").value, 
-                form.elements.namedItem("email").value, 
-                form.elements.namedItem("cpf").value, 
+                form.elements.namedItem("email").value,
                 form.elements.namedItem("telefone").value, 
-                form.elements.namedItem("contato").value);
+                form.elements.namedItem("contato").value,
+                form.elements.namedItem("mensagem").value);
 
-    if (data.contato == 1){
-        alert("Selecione um meio de contato");
-        return;
-    } 
 
     Enviar(data);
     
 }
 
 function Enviar(pessoa) {
-    
+
     var nome = pessoa.nome;
+    console.table(pessoa.dados())
     
     if (nome != "") {
         document.location = 'index.html';

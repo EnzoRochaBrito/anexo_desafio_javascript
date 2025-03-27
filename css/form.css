@@ -9,6 +9,16 @@
     padding: 5px;
 }
 
+textarea{
+    resize: none;
+    max-width: 300px;
+    min-height: 200px;
+}
+
+textarea:focus{
+    outline: none;
+}
+
 select.fordform {
     width: 310px;
     height: 36px;
@@ -47,6 +57,11 @@ button {
     height: 40px;
     margin-right: 8px;
     float: right;
+    transition: transform 0.2s;
+}
+
+button:hover{
+    transform: scale(1.1);
 }
 
 .titulo {
