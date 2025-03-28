@@ -100,7 +100,6 @@ function UpdateCompareTable() {
     for (let i = 0 ; i < carArr.length; i++){
         
         let car  = carArr[i];
-        let preco = parseFloat(car.preco).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'});
         
         document.querySelector("#compare_image_" + i).innerHTML = `<img src="${car.image}">`;
         document.querySelector("#compare_modelo_" + i).innerHTML = car.nome;
@@ -112,7 +111,7 @@ function UpdateCompareTable() {
         document.querySelector("#compare_potencia_" + i).innerHTML = car.potencia;
         document.querySelector("#compare_volumecacamba_" + i).innerHTML = car.volumeCacamba;
         document.querySelector("#compare_roda_" + i).innerHTML = car.roda;
-        document.querySelector("#compare_preco_" + i).innerHTML = preco;
+        document.querySelector("#compare_preco_" + i).innerHTML = car.preco.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'});
     } 
     // nome, preco, alturaCacamba, alturaVeiculo, alturaSolo, capacidadeCarga, motor, potencia, volumeCacamba, roda, image
 }

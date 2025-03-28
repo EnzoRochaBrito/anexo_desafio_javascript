@@ -111,11 +111,16 @@ nav#social {
 
 nav#social ul img {
     width: 28px;
+    transition: scale 0.2s;
 }
 
 span.redesociais {
     color: #ffffff;
     vertical-align: super;
+}
+
+nav#social ul img:hover {
+    scale: 1.2;
 }
 
 footer {
