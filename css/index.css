@@ -1,0 +1,19 @@
+#carousel{
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+#carousel a img{
+    position: relative;
+    max-width: 95vw;
+    height: 100%;
+    border-radius: 0.5rem;
+}
+
+#carousel-title a{
+    color: navy;
+}

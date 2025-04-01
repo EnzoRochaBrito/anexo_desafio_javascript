@@ -16,10 +16,11 @@ class Carousel {
     }
     
     
-    static Start(arr){
+    static Start(arr, home=true){
         if(arr){
             
             if(arr.length > 0){
+                Carousel._isHome = home;
                 Carousel._sequence = 0;
                 Carousel._size = arr.length;
                 Carousel.InsertContent(arr);
@@ -38,12 +39,15 @@ class Carousel {
             element.style.display = 'none';
         });
 
-        document.querySelectorAll('#carousel-title a').forEach(element => {
-            element.style.display = 'none';
-        });
-
         document.querySelector(`#carousel a:nth-child(${Carousel._sequence+1})`).style.display = 'inline';
-        document.querySelector(`#carousel-title a:nth-child(${Carousel._sequence+1})`).style.display = 'inline';
+
+        if (Carousel._isHome){
+            document.querySelectorAll('#carousel-title a').forEach(element => {
+                element.style.display = 'none';
+            });
+            document.querySelector(`#carousel-title a:nth-child(${Carousel._sequence+1})`).style.display = 'inline';
+        }
+
 
         (Carousel._sequence >= Carousel._size-1) ? Carousel._sequence = 0 : Carousel._sequence++;
         
@@ -62,11 +66,14 @@ class Carousel {
 
             const currentCarousel = arr[i];
             const carouselImage   = currentCarousel.Image;
-            const carouselTitle   = currentCarousel.Title;
             const carouselUrl     = currentCarousel.Url;
-
-            document.querySelector('#carousel').innerHTML += `<a href="${carouselUrl}"><img src="img/${carouselImage}" alt="${carouselTitle}"></a>`
-            document.querySelector('#carousel-title').innerHTML += `<a href="${carouselUrl}">${carouselTitle}</a>`
+            const carouselTitle   = currentCarousel.Title;
+            if (Carousel._isHome){
+                document.querySelector('#carousel').innerHTML += `<a href="${carouselUrl}"><img src="img/${carouselImage}" alt="${carouselTitle}"></a>`
+                document.querySelector('#carousel-title').innerHTML += `<a href="${carouselUrl}">${carouselTitle}</a>`
+            } else {
+                document.querySelector('#carousel').innerHTML += `<a href="${carouselUrl}"><img src="img/${carouselImage}"></a>`
+            }
         }
     }
 };

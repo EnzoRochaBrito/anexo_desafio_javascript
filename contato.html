@@ -10,6 +10,7 @@
     <link href="css/form.css" rel="stylesheet">
     <link rel="shortcut icon" href="img/ford-ico.png" type="image/x-icon">
     <script src="js/form.js"></script>
+    <script src="js/carousel.js"></script>
 </head>
 <body>
     <header>       
@@ -32,6 +33,17 @@
 
     </header>
     <main>
+        <div class="carousel-panel">
+            <div id="carousel">
+            </div>
+        </div>
+        <script>
+            //insert each image on carousel
+           carouselArr.push(new Carousel("imagem_1.jpg","Esta é a nova Ranger Ford 2022. Verifique novidades.","lancamento.html"));
+           carouselArr.push(new Carousel("imagem_2.jpg","Ford a nossa história","#"));
+           carouselArr.push(new Carousel("imagem_3.jpg","Nova Ford Bronco Sport 2022","lancamento.html"));
+           Carousel.Start(carouselArr, false);
+       </script>
         <div class="forms">
             <div>
                 <img src="img/xls 2.2 diesel.jpg">

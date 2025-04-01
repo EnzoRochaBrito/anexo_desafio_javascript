@@ -1,3 +1,48 @@
+main{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+.carousel-panel{
+        height: 100%;
+        flex-grow: .4;
+        min-width: 10vw;
+        border-right: 1px solid black;
+        width: min-content;
+        /* background-color: red; */
+        #carousel{
+            height: 100%;
+        }
+        a {
+            height: auto;
+        }
+        img{
+            height: 100dvh;
+            width: 100%;
+            object-fit: cover;
+            object-position: 0;
+            animation-name: image;
+            animation-duration: 5s;
+            animation-timing-function: linear;
+            transition: all linear;
+        }
+    }
+
+@keyframes image {
+    0% {object-position: 0%;}
+    100% {object-position: 120%;}
+    
+}
+
+.carousel-title{
+    display: none;
+}
+
+.forms{
+    height: 100%;
+    flex-grow: 1;
+}
+
 .fordform {
     display: block;
     width: 300px;
@@ -66,4 +111,10 @@ button:hover{
 
 .titulo {
     margin-left: 8px;
+}
+
+@media screen and (orientation: portrait){
+    main{
+        flex-direction: column;
+    }
 }
