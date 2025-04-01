@@ -90,6 +90,7 @@ td img{
 
 .comparar_bloqueado {
     background-color: gray !important;
+    transition: all .2s;
 }
 .comparar_bloqueado:hover {
     background-color: rgb(80, 80, 80) !important;
