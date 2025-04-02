@@ -1,6 +1,6 @@
 
-const carImageWrapper = document.querySelector('.forms .car-wrapper')
-const carImage = document.querySelector('.content img')
+const chainCar  = document.querySelector('.forms .car-wrapper .chain-car')
+const normalCar = document.querySelector('.forms .car-wrapper .car')
 
 //class contato
 
@@ -49,7 +49,8 @@ function Enviar(pessoa) {
 
 function carEnter(){
     setTimeout(()=>{
-        carImage.style['animationName'] = ''
-        carImageWrapper.innerHTML = '<img src="img/xls 2.2 diesel.jpg">'
-    } ,2000)
+        chainCar.style.opacity = 0;
+        chainCar.style.display = 'none';
+        normalCar.style.display = 'inline-block';
+    } ,1500)
 }
