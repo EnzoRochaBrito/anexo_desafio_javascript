@@ -1,4 +1,7 @@
 
+const carImageWrapper = document.querySelector('.forms .car-wrapper')
+const carImage = document.querySelector('.content img')
+
 //class contato
 
 class contato {
@@ -42,4 +45,11 @@ function Enviar(pessoa) {
         document.location = 'index.html';
         alert('Obrigado sr(a) ' + nome + ' os seus dados foram encaminhados com sucesso');
     }
+}
+
+function carEnter(){
+    setTimeout(()=>{
+        carImage.style['animationName'] = ''
+        carImageWrapper.innerHTML = '<img src="img/xls 2.2 diesel.jpg">'
+    } ,2000)
 }

@@ -9,10 +9,10 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="css/form.css" rel="stylesheet">
     <link rel="shortcut icon" href="img/ford-ico.png" type="image/x-icon">
-    <script src="js/form.js"></script>
+    <script defer src="js/form.js"></script>
     <script src="js/carousel.js"></script>
 </head>
-<body>
+<body onload="carEnter()">
     <header>       
         <div>
             <a href="index.html"><img src="img/logo-ford-256.png" width="150" class="logo" /></a>
@@ -42,30 +42,37 @@
            carouselArr.push(new Carousel("imagem_1.jpg","Esta é a nova Ranger Ford 2022. Verifique novidades.","lancamento.html"));
            carouselArr.push(new Carousel("imagem_2.jpg","Ford a nossa história","#"));
            carouselArr.push(new Carousel("imagem_3.jpg","Nova Ford Bronco Sport 2022","lancamento.html"));
-           Carousel.Start(carouselArr, false);
+           Carousel.Start(carouselArr, false, 5000);
        </script>
-        <div class="forms">
-            <div>
-                <img src="img/xls 2.2 diesel.jpg">
-            </div>
-            <div>
-                <h2 class="titulo">Sobre Você</h2>
-            <form method="post" onsubmit="Post(this); return false;">
-                <input type="text" name="nome" placeholder="NOME*" class="fordform" required>
-                <input type="email" name="email" placeholder="E-MAIL*" class="fordform" required>
-                <input type="tel" name="telefone" placeholder="TELEFONE*" class="fordform" required>
-                <select name="contato" class="fordform" required>
-                    <option value="" selected disabled>SELECIONE O TIPO DE CONTATO</option>
-                    <option value="elogio">ELOGIO</option>
-                    <option value="reclamacao">RECLAMAÇÃO</option>
-                    <option value="solicitacao">SOLICITAÇÃO</option>
-                </select>
-                <textarea class="fordform" name="mensagem" id="mensagem" placeholder="MENSAGEM*" required></textarea>
-            <button type="submit">Enviar</button>
-            </form>
+       <div class="content">
+           <div class="forms">
+               <div class="car-wrapper">
+                   <img src="img/car with chain.png">
+                   <img src="img/xls 2.2 diesel.jpg">
+                </div>
+                <div class="form-wrapper">
+                    <div class="form-main">
+                        <h2 class="titulo">Sobre Você</h2>
+                        <form  method="post" onsubmit="Post(this); return false;">
+                            <input type="text" name="nome" placeholder="NOME*" class="fordform" required>
+                            <input type="email" name="email" placeholder="E-MAIL*" class="fordform" required>
+                            <input type="tel" name="telefone" placeholder="TELEFONE*" class="fordform" required>
+                            <select name="contato" class="fordform" required>
+                                <option value="" selected disabled>SELECIONE O TIPO DE CONTATO</option>
+                                <option value="elogio">ELOGIO</option>
+                                <option value="reclamacao">RECLAMAÇÃO</option>
+                                <option value="solicitacao">SOLICITAÇÃO</option>
+                            </select>
+                            <textarea class="fordform" name="mensagem" id="mensagem" 
+                            
+                            placeholder="MENSAGEM*" required></textarea>
+                            <button type="submit">Enviar</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
-    </main>
+        </main>
     <footer>
         <nav id="social">
             <ul>

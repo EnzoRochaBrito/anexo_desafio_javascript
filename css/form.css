@@ -2,35 +2,43 @@ main{
     display: flex;
     flex-direction: row;
     height: 100%;
+    overflow: hidden;
 }
 .carousel-panel{
-        height: 100%;
-        flex-grow: .4;
-        min-width: 10vw;
-        border-right: 1px solid black;
-        width: min-content;
-        /* background-color: red; */
-        #carousel{
-            height: 100%;
-        }
-        a {
-            height: auto;
-        }
-        img{
-            height: 100dvh;
-            width: 100%;
-            object-fit: cover;
-            object-position: 0;
-            animation-name: image;
-            animation-duration: 5s;
-            animation-timing-function: linear;
-            transition: all linear;
-        }
+    position: sticky;
+    height: 100%;
+    padding: 0;
+    flex-grow: 0.4;
+    min-width: 10vw;
+    width: min-content;
+    /* background-color: red; */
+    div#carousel{
+        /* background-color: #; */
+        min-height: 100%;
+        padding: 0;
     }
+    img{
+        margin: auto;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        /* object-position: center; */
+        /* display: none; */
+        animation-name: image-anim;
+        animation-duration: 5s;
+        animation-timing-function: linear;
+        transition: all linear;
+    }
+    span{
+        background-color: red;
+        width: 100px;
+        height: 100px;
+    }
+}
 
-@keyframes image {
-    0% {object-position: 0%;}
-    100% {object-position: 120%;}
+@keyframes image-anim {
+    0% {object-position: 10%;}
+    100% {object-position: 90%;}
     
 }
 
@@ -38,9 +46,44 @@ main{
     display: none;
 }
 
-.forms{
-    height: 100%;
+.content{
+    height: auto;
     flex-grow: 1;
+    animation-name: test;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+    img{
+        animation-name: transform-car;
+        animation-duration: 1.5s;
+        animation-timing-function: linear;
+        transform: translateX(5px);
+    }
+    
+    .form-wrapper{
+        position: relative;
+        /* padding: 0 5px; */
+        /* height: 50vh; */
+        .form-main{
+            left: 30dvh;
+            
+            border-radius: 1rem;
+            animation-name: transform-form;
+            animation-duration: 1.5s;
+            animation-timing-function: linear;
+        }
+    }
+}
+
+@keyframes transform-form {
+    from {transform: translateX(100dvh); box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);}
+    to {transform: translateX(0);}
+}
+@keyframes transform-car {
+    from {transform: translateX(100dvh);}
+    to {transform: translateX(5px);}
 }
 
 .fordform {

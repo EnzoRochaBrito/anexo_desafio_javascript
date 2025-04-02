@@ -16,7 +16,7 @@ class Carousel {
     }
     
     
-    static Start(arr, home=true){
+    static Start(arr, home=true, time=2000){
         if(arr){
             
             if(arr.length > 0){
@@ -25,7 +25,7 @@ class Carousel {
                 Carousel._size = arr.length;
                 Carousel.InsertContent(arr);
                 Carousel.Next(); //start
-                Carousel._interval = setInterval(function(){ Carousel.Next(); },2000);
+                Carousel._interval = setInterval(function(){ Carousel.Next(); }, time);
             }
             
         } else {
