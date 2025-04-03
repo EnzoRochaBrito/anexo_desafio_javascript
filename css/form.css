@@ -62,10 +62,13 @@ main{
     .chain-car{
         animation-name: transform-car;
         animation-duration: 1.5s;
-        animation-timing-function: linear;
-        transform: translateX(5px);
+        animation-timing-function: ease;
+        transition: all 0.2s;
     }
-    
+    .car {
+        transition: all 0.2s;
+        transform: rotateY(90deg)
+    }
     .form-wrapper{
         position: relative;
         /* padding: 0 5px; */
@@ -76,18 +79,18 @@ main{
             border-radius: 1rem;
             animation-name: transform-form;
             animation-duration: 1.5s;
-            animation-timing-function: linear;
+            animation-timing-function: ease;
         }
     }
 }
 
 @keyframes transform-form {
-    from {transform: translateX(100dvh); box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);}
-    to {transform: translateX(0);}
+    from {transform: translateX(100dvh); box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);}
+    to {transform: translateX(0); box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);}
 }
 @keyframes transform-car {
     from {transform: translateX(100dvh);}
-    to {transform: translateX(5px);}
+    to {transform: translateX(0px);}
 }
 
 .fordform {

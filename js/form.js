@@ -49,8 +49,10 @@ function Enviar(pessoa) {
 
 function carEnter(){
     setTimeout(()=>{
-        chainCar.style.opacity = 0;
+        setTimeout(()=> {chainCar.style.transform = "translate-y(90deg)"}, 2000);
+        chainCar.style.transform = "rotateY(90deg)"
         chainCar.style.display = 'none';
         normalCar.style.display = 'inline-block';
+        normalCar.style.transform = "rotateY(0deg)"
     } ,1500)
 }
