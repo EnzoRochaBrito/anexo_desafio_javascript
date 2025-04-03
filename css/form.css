@@ -4,9 +4,7 @@ main{
     height: 100%;
     overflow: hidden;
 }
-.car{
-    display: none;
-}
+
 
 .carousel-panel{
     position: sticky;
@@ -60,14 +58,16 @@ main{
     overflow-y: auto;
     overflow-x: hidden;
     .chain-car{
+        transition: all .5s;
         animation-name: transform-car;
         animation-duration: 1.5s;
         animation-timing-function: ease;
-        transition: all 0.2s;
     }
     .car {
-        transition: all 0.2s;
-
+        transition: all .5s;
+        display: none;
+        filter: blur(2.5rem);
+        opacity: 0;
     }
     .form-wrapper{
         position: relative;
@@ -86,7 +86,7 @@ main{
 
 @keyframes transform-form {
     from {transform: translateX(100dvh); box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);}
-    to {transform: translateX(0); box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);}
+    to {transform: translateX(-20px); box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);}
 }
 @keyframes transform-car {
     from {transform: translateX(100dvh);}

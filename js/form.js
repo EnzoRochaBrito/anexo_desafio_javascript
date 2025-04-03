@@ -49,10 +49,18 @@ function Enviar(pessoa) {
 
 function carEnter(){
     setTimeout(()=>{
-        setTimeout(()=> {chainCar.style.transform = "translate-y(90deg)"}, 2000);
-        chainCar.style.transform = "rotateY(90deg)"
-        chainCar.style.display = 'none';
-        normalCar.style.display = 'inline-block';
-        normalCar.style.transform = "rotateY(0deg)"
+        chainCar.style.filter = "blur(2.5rem)"
+        chainCar.style.opacity = "0"
+        
+        setTimeout(disappear, 500)
+
+        normalCar.style.transition = "all .5s"
+        normalCar.style.filter = "blur(0)"
+        normalCar.style.opacity = "1"
     } ,1500)
+}
+
+function disappear(){
+    chainCar.style.display = 'none';
+    normalCar.style.display = 'inline-block'
 }

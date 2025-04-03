@@ -1,0 +1,149 @@
+/* salve */
+ul.modelcars {
+    display: block;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+ul.modelcars li {
+    display: inline-block;
+    text-align: left;
+    width: 300px;
+    vertical-align: top;
+}
+
+img.photocar {
+    display: block;
+    width: 250px;
+}
+
+.checkbox {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #1b357e;
+}
+
+.infocar div {
+    display: inline-block;
+}
+
+.info {
+    width: 200px;
+    vertical-align: top;
+}
+
+.textmodel {
+    display: block;
+    text-align: left;
+    font-size: 14px;
+    color: #1351d8;
+    
+}
+.textprice {
+    display: block;
+    text-align: left;
+    font-size: 10px;
+}
+
+table {
+    overflow-x: auto;
+    border-collapse: collapse;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2vh;
+    margin-bottom: 10px;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+
+  td:nth-child(1) {  
+    font-weight: 700;
+    width: 40%;
+  }
+
+  tr:nth-child(even) {background-color: #f2f2f2;}
+
+div#compare {   
+    position: fixed;
+    display: none;
+    width: max-content;
+    height: max-content;
+    max-height: 700px;
+    min-height: 350px;
+    background: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    padding: 1rem;
+    -webkit-box-shadow: 1px 1px 6px 0px rgb(0 0 0 / 34%);
+    box-shadow: 1px 1px 6px 0px rgb(0 0 0 / 34%);
+}
+
+td img{
+    max-width: 200px;
+}
+
+.comparar_bloqueado {
+    background-color: gray !important;
+    transition: all .2s;
+}
+.comparar_bloqueado:hover {
+    background-color: rgb(80, 80, 80) !important;
+}
+
+.texto{
+    text-align: justify;
+}
+
+
+.texto p{
+    max-width: 700px;
+    margin: 1rem auto;
+    padding: 1rem;
+    font-size: large;
+    cursor: default;
+    
+    strong {
+        color: #1351d8;
+        font-weight: bold;
+    }
+}
+
+
+@media screen and (max-width: 1000px){
+    div#compare{
+        border-radius: 0;
+        padding: 0;
+        font-size: small;
+        width: 100vw;
+        height: auto;
+        max-height: 95dvh;
+        button{
+            max-width: 100px;
+        }
+    }
+    td img {
+        width: 60%;
+    }
+    
+    td {
+        position: relative;
+        align-content: center;
+    }
+    
+    table{
+        height: calc(100% - 80px);
+        max-height: 100px;
+    }
+}
+
+@media screen and (max-height: 550px){
+    th, td{
+        padding: 4px;
+    }
+}
