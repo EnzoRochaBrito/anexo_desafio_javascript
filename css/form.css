@@ -67,7 +67,7 @@ main{
     }
     .car {
         transition: all 0.2s;
-        transform: rotateY(90deg)
+
     }
     .form-wrapper{
         position: relative;
